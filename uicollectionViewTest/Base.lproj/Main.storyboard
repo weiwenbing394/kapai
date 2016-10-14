@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KBM-vK-zLp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5E5-hG-zlW">
+            <objects>
+                <viewController id="KBM-vK-zLp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Eq-Fm-4mU"/>
+                        <viewControllerLayoutGuide type="bottom" id="l4N-iv-mWX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qpn-ed-IF1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMD-y5-2ZD">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="卡片样式一"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="YTn-om-b2p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79E-R5-zXY">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="卡片样式二"/>
+                                <connections>
+                                    <segue destination="R6V-kE-J3e" kind="popoverPresentation" popoverAnchorView="79E-R5-zXY" id="HLJ-UY-FcS">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="79E-R5-zXY" firstAttribute="leading" secondItem="qpn-ed-IF1" secondAttribute="leading" id="0vS-7x-54Z"/>
+                            <constraint firstAttribute="trailing" secondItem="79E-R5-zXY" secondAttribute="trailing" id="6cS-or-Yrp"/>
+                            <constraint firstItem="kMD-y5-2ZD" firstAttribute="leading" secondItem="qpn-ed-IF1" secondAttribute="leading" id="GJB-Ez-99z"/>
+                            <constraint firstAttribute="trailing" secondItem="kMD-y5-2ZD" secondAttribute="trailing" id="TWW-9Q-nVj"/>
+                            <constraint firstItem="79E-R5-zXY" firstAttribute="top" secondItem="kMD-y5-2ZD" secondAttribute="bottom" id="hvd-RO-GFj"/>
+                            <constraint firstItem="kMD-y5-2ZD" firstAttribute="centerY" secondItem="qpn-ed-IF1" secondAttribute="centerY" constant="-30" id="oKg-Xb-CbX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8In-w4-EVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714.39999999999998" y="111.99400299850076"/>
+        </scene>
+        <!--Kapian View Controller-->
+        <scene sceneID="BsU-W8-T4x">
+            <objects>
+                <viewController id="R6V-kE-J3e" customClass="KapianViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PEY-k4-4JB"/>
+                        <viewControllerLayoutGuide type="bottom" id="kgQ-bz-lPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K2f-p7-OvN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-X8-O6v">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Od1-8b-nP3"/>
+                                    <constraint firstAttribute="width" constant="100" id="n5k-qQ-lsb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="R6V-kE-J3e" eventType="touchUpInside" id="GbT-U9-ArS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3294117647" green="0.43137254899999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVF-X8-O6v" firstAttribute="leading" secondItem="K2f-p7-OvN" secondAttribute="leadingMargin" constant="10" id="S9O-VQ-ARM"/>
+                            <constraint firstItem="ZVF-X8-O6v" firstAttribute="top" secondItem="PEY-k4-4JB" secondAttribute="bottom" id="f08-ml-19E"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CK7-Ms-XNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="477"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O3-16-H08">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CxI-y6-Q3Y"/>
+                                    <constraint firstAttribute="width" constant="100" id="TWN-tM-rDN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDJ-Ew-0Nk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0O3-16-H08" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Eql-Mi-wwb"/>
+                            <constraint firstItem="0O3-16-H08" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zVB-nT-VRZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="-170.46476761619192"/>
+        </scene>
+    </scenes>
+</document>
